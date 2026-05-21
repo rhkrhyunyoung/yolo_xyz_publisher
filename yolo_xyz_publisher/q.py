@@ -116,10 +116,10 @@ def main():
             (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 0), 2)
                             cv2.circle(color_image, (cx, cy), 3, (0, 0, 255), -1)
 
-                            # ROS 2 메시지 발행
+                            # ROS 2 메시지 발행 오른손법칙
                             msg = Point()
                             msg.x = float(real_z)   # 카메라의 정면(Z)이 로봇의 앞방향(X)
-                            msg.y = float(real_x)  # 카메라의 오른쪽(X)이 로봇의 왼쪽(Y)
+                            msg.y = float(-real_x)  # 카메라의 오른쪽(X)이 로봇의 오른쪽(Y)
                             msg.z = float(-real_y)  # 카메라의 아래쪽(Y)에 -를 붙여 로봇의 위쪽(Z)
                             publisher.publish(msg)
                             
