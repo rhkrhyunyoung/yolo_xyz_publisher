@@ -4,7 +4,7 @@ import os
 package_name = 'yolo_xyz_publisher'
 
 # weight 파일이 있는지 확인
-weights_path = os.path.join('yolo_xyz_publisher', 'weights', 'best.pt')
+weights_path = 'best.pt'
 data_files = [
     ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
     ('share/' + package_name, ['package.xml']),
@@ -31,7 +31,7 @@ setup(
     entry_points={
         'console_scripts': [
             'xyz_listener = yolo_xyz_publisher.xyz_listener:main',
-            'q = yolo_xyz_publisher.q:main',  # ← 간단하게 'q'로 지정
+            'q = yolo_xyz_publisher.q:main',
         ],
     },
 )
