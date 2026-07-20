@@ -12,7 +12,7 @@ import os
 
 # --- Configuration Parameters ---
 os.environ["YOLO_CONFIG_DIR"] = "/tmp/ultralytics"
-MODEL_PATH = '/home/kudos/drokck_free/src/yolo_xyz_publisher/yolo_xyz_publisher/best.pt'
+MODEL_PATH = '/home/rhkrgusdud/drokck_free/src/yolo_xyz_publisher/best.pt'
 WINDOW_DETECTION = "2. YOLO Detection View (For Monitoring)"
 
 class YoloXyzNode(Node):
